@@ -10,5 +10,7 @@ LABEL com.github.actions.description="Wraps a simple bash echo command."
 LABEL com.github.actions.icon="package"
 LABEL com.github.actions.color="purple"
 
+RUN apk add --no-cache bash
+
 COPY "entrypoint.sh" "/entrypoint.sh"
 ENTRYPOINT ["/entrypoint.sh"]
